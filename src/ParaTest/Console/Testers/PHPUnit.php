@@ -128,13 +128,13 @@ class PHPUnit extends Tester
         $path = $input->getArgument('path');
         $options = $this->getOptions($input);
 
-        if ($this->hasConfig($input) && !isset($options['bootstrap'])) {
+/*        if ($this->hasConfig($input) && !isset($options['bootstrap'])) {
             $config = $this->getConfig($input);
             if ($config->getBootstrap()) {
                 $options['bootstrap'] = $config->getConfigDir() . $config->getBootstrap();
             }
         }
-
+*/
         if (isset($options['bootstrap'])) {
             if (file_exists($options['bootstrap'])) {
                 $this->requireBootstrap($options['bootstrap']);
